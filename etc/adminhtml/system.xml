@@ -45,8 +45,9 @@
                 showInStore='0'
             >
                 <label>Product View</label>
+                <!-- https://mage2.pro/t/196 -->
                 <field
-                    id='enable'
+                    id='hide_stock_status_for_virtual_and_downloadable_products'
                     translate='label'
                     type='select'
                     sortOrder='1'
@@ -54,9 +55,9 @@
                     showInWebsite='1'
                     showInStore='1'
                 >
-                    <label>Enable?</label>
+                    <label>Hide Stock Status for the Virtual and Downloadable Products?</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[]]></comment>
+                    <comment><![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
                 </field>
             </group>
         </section>
