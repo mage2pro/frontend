@@ -1,6 +1,6 @@
 {
-	"name": "dfe/tweaks"
-	,"description": "«Tweaks» extension"
+	"name": "dfe/frontend-tweaks"
+	,"description": "«Frontend Tweaks» extension"
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/t/197"
 	,"license": "proprietary"
@@ -11,5 +11,5 @@
 		"role": "Developer"
 	}]
 	,"require": {"df/all": "dev-master"}
-	,"extra": {"map": [["*", "Dfe/Tweaks"]]}
+	,"extra": {"map": [["*", "Dfe/FrontendTweaks"]]}
 }
