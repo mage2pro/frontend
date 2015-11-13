@@ -1,8 +1,8 @@
 <?php
-namespace Dfe\FrontendTweaks;
+namespace Dfe\FrontendTweaks\Plugin\Catalog\Block\Product;
 use Dfe\FrontendTweaks\Settings\ProductView as ProductViewSettings;
-use Magento\Catalog\Block\Product\AbstractProduct;
-class AbstractProductBlockPlugin {
+use Magento\Catalog\Block\Product\AbstractProduct as _AbstractProduct;
+class AbstractProduct {
 	/**
 	 * 2015-11-13
 	 * Цель метода — поддержка опции
@@ -19,15 +19,12 @@ class AbstractProductBlockPlugin {
 	 * https://github.com/magento/magento2/issues/2354
 	 * https://mage2.pro/t/200
 	 * @see \Magento\Catalog\Block\Product\AbstractProduct::displayProductStockStatus()
-	 * @param AbstractProduct $subject
+	 * @param _AbstractProduct $subject
 	 * @param string $result
 	 * @return string
 	 */
-	public function afterDisplayProductStockStatus(AbstractProduct $subject, $result) {
-		return $result && !(
-			in_array($subject->getProduct()->getTypeId(), ['virtual', 'downloadable'])
-			&& ProductViewSettings::s()->hideStockStatusForVirtualAndDownloadableProdusts()
-		);
+	public function afterDisplayProductStockStatus(_AbstractProduct $subject, $result) {
+		return $result && !ProductViewSettings::s()->hideStockStatus($subject->getProduct());
 	}
 }
 

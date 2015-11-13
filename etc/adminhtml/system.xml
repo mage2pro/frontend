@@ -55,9 +55,22 @@
                     showInWebsite='1'
                     showInStore='1'
                 >
-                    <label>Hide Stock Status for the Virtual and Downloadable Products?</label>
+                    <label>Hide the Stock Status for the Virtual and Downloadable Products?</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment><![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
+                </field>
+                <field
+                    id='hide_sku'
+                    translate='label'
+                    type='select'
+                    sortOrder='2'
+                    showInDefault='1'
+                    showInWebsite='1'
+                    showInStore='1'
+                >
+                    <label>Hide the SKU?</label>
+                    <source_model>Dfe\FrontendTweaks\ConfigSource\HideSku</source_model>
+                    <comment><![CDATA[<a href='https://mage2.pro/t/197'>Documentation.</a>]]></comment>
                 </field>
             </group>
         </section>
