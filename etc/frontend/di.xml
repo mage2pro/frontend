@@ -15,17 +15,4 @@
 			type='Dfe\FrontendTweaks\Plugin\Catalog\Block\Product\AbstractProduct'
 		/>
 	</type>
-	<!--
-		2015-11-13
-		Цель плагина — возможность скрытия артикула с витринных страниц товаров.
-		https://github.com/magento/magento2/issues/2359
-		https://mage2.pro/t/203
-		https://mage2.pro/t/202
-	-->
-	<type name='Magento\Catalog\Block\Product\View\Description'>
-		<plugin
-			name='Dfe\FrontendTweaks\Plugin\Catalog\Block\Product\View\Description'
-			type='Dfe\FrontendTweaks\Plugin\Catalog\Block\Product\View\Description'
-		/>
-	</type>
 </config>
