@@ -5,8 +5,15 @@
 >
     <default>
         <dfe_frontend>
-            <product_view>
-            </product_view>
+            <sku>
+                <label>SKU</label>
+                <!--
+                	2015-11-14
+                	https://github.com/magento/magento2/blob/2335247d4ae2dc1e0728ee73022b0a244ccd7f4c/app/design/frontend/Magento/luma/Magento_Catalog/web/css/source/_module.less#L229
+                -->
+                <label_suffix>#:</label_suffix>
+				<show_label>1</show_label>
+            </sku>
         </dfe_frontend>
     </default>
 </config>

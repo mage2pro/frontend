@@ -1,59 +1,159 @@
 <?xml version='1.0'?>
 <config
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd"
 >
-    <system>
-        <!--
-            2015-07-10
-            Минимальная длина идентификатора tab — 3 символа:
-            https://github.com/magento/magento2/blob/1.0.0-beta/app/code/Magento/Config/etc/system_file.xsd#L405
-            Поэтому ставим символ подчёркивания вначале.
-        -->
-        <tab id='_df' translate='label' sortOrder='-100'>
-            <label>Mage2.PRO</label>
-        </tab>
-        <section
-            id='dfe_frontend'
-            translate='label'
-            type='text'
-            showInDefault='1'
-            showInWebsite='1'
-            showInStore='1'
-        >
-            <tab>_df</tab>
-            <label>Frontend</label>
-            <class>separator-top</class>
-            <!--
-                2015-11-13
-                https://mage2.pro/t/197
-            -->
-            <resource>Dfe_Frontend::config</resource>
-            <group
-                id='product_view'
-                translate='label'
-                type='text'
-                sortOrder='1'
-                showInDefault='1'
-                showInWebsite='1'
-                showInStore='0'
-            >
-                <label>Product View</label>
-                <!-- https://mage2.pro/t/196 -->
-                <field
-                    id='hide_stock_status_for_virtual_and_downloadable_products'
-                    translate='label'
-                    type='select'
-                    sortOrder='1'
-                    showInDefault='1'
-                    showInWebsite='1'
-                    showInStore='1'
-                >
-                    <label>Hide the Stock Status for the Virtual and Downloadable Products?</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
-                </field>
-            </group>
-        </section>
-    </system>
+	<system>
+		<!--
+			2015-07-10
+			Минимальная длина идентификатора tab — 3 символа:
+			https://github.com/magento/magento2/blob/1.0.0-beta/app/code/Magento/Config/etc/system_file.xsd#L405
+			Поэтому ставим символ подчёркивания вначале.
+		-->
+		<tab id='_df' translate='label' sortOrder='-100'>
+			<label>Mage2.PRO</label>
+		</tab>
+		<section
+			id='dfe_frontend'
+			translate='label'
+			type='text'
+			showInDefault='1'
+			showInWebsite='1'
+			showInStore='1'
+		>
+			<tab>_df</tab>
+			<label>Frontend</label>
+			<class>separator-top</class>
+			<!--
+				2015-11-13
+				https://mage2.pro/t/197
+			-->
+			<resource>Dfe_Frontend::config</resource>
+			<group
+				id='sku'
+				translate='label'
+				type='text'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>SKU</label>
+				<field
+					id='visibility'
+					translate='label'
+					type='select'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Visibility</label>
+					<source_model>Dfe\Frontend\ConfigSource\SkuVisibility</source_model>
+					<comment><![CDATA[<a href='https://mage2.pro/t/197'>Documentation.</a>]]></comment>
+				</field>
+				<field
+					id='id_instead_of_sku'
+					translate='label'
+					type='Df\Framework\Data\Form\Element\Checkbox'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Show ID instead of SKU?</label>
+					<backend_model>Df\Config\Backend\Checkbox</backend_model>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
+				</field>
+				<field
+					id='label'
+					translate='label'
+					type='text'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Label</label>
+					<comment><![CDATA[The default label is `SKU`.]]></comment>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
+				</field>
+				<field
+					id='label_suffix'
+					translate='label'
+					type='text'
+					sortOrder='3'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Label Suffix</label>
+					<comment><![CDATA[The default label suffix is `#:`.]]></comment>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
+				</field>
+				<field
+					id='value_font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='4'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Value Font</label>
+					<comment><![CDATA[A font style for the SKU.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
+				</field>
+				<field
+					id='label_font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='5'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Label Font</label>
+					<comment><![CDATA[A font style for the SKU's label.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
+				</field>
+			</group>
+			<group
+				id='stock_status'
+				translate='label'
+				type='text'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>Stock Status</label>
+				<!-- https://mage2.pro/t/196 -->
+				<field
+					id='hide_for_virtual_and_downloadable_products'
+					translate='label'
+					type='Df\Framework\Data\Form\Element\Checkbox'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Hide for Virtual and Downloadable Products?</label>
+					<backend_model>Df\Config\Backend\Checkbox</backend_model>
+					<comment>
+						<![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
+				</field>
+			</group>
+		</section>
+	</system>
 </config>
