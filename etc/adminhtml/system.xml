@@ -14,7 +14,7 @@
             <label>Mage2.PRO</label>
         </tab>
         <section
-            id='dfe_frontend_tweaks'
+            id='dfe_frontend'
             translate='label'
             type='text'
             showInDefault='1'
@@ -22,13 +22,13 @@
             showInStore='1'
         >
             <tab>_df</tab>
-            <label>Frontend Tweaks</label>
+            <label>Frontend</label>
             <class>separator-top</class>
             <!--
                 2015-11-13
                 https://mage2.pro/t/197
             -->
-            <resource>Dfe_FrontendTweaks::config</resource>
+            <resource>Dfe_Frontend::config</resource>
             <group
                 id='product_view'
                 translate='label'

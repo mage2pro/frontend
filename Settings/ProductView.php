@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\FrontendTweaks\Settings;
-use Dfe\FrontendTweaks\ConfigSource\HideSku;
+namespace Dfe\Frontend\Settings;
+use Dfe\Frontend\ConfigSource\HideSku;
 use Magento\Catalog\Model\Product;
 class ProductView extends \Df\Core\Settings {
 	/**
@@ -23,8 +23,8 @@ class ProductView extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend_tweaks/product_view/';}
+	protected function prefix() {return 'dfe_frontend/product_view/';}
 
-	/** @return \Dfe\FrontendTweaks\Settings\ProductView */
+	/** @return \Dfe\Frontend\Settings\ProductView */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
 }

@@ -11,8 +11,8 @@
 	-->
 	<type name='Magento\Catalog\Block\Product\AbstractProduct'>
 		<plugin
-			name='Dfe\FrontendTweaks\Plugin\Catalog\Block\Product\AbstractProduct'
-			type='Dfe\FrontendTweaks\Plugin\Catalog\Block\Product\AbstractProduct'
+			name='Dfe\Frontend\Plugin\Catalog\Block\Product\AbstractProduct'
+			type='Dfe\Frontend\Plugin\Catalog\Block\Product\AbstractProduct'
 		/>
 	</type>
 </config>

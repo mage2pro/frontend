@@ -4,9 +4,9 @@
     xsi:noNamespaceSchemaLocation='urn:magento:module:Magento_Store:etc/config.xsd'
 >
     <default>
-        <dfe_frontend_tweaks>
+        <dfe_frontend>
             <product_view>
             </product_view>
-        </dfe_frontend_tweaks>
+        </dfe_frontend>
     </default>
 </config>

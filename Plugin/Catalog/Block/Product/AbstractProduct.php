@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\FrontendTweaks\Plugin\Catalog\Block\Product;
-use Dfe\FrontendTweaks\Settings\ProductView as ProductViewSettings;
+namespace Dfe\Frontend\Plugin\Catalog\Block\Product;
+use Dfe\Frontend\Settings\ProductView as ProductViewSettings;
 use Magento\Catalog\Block\Product\AbstractProduct as _AbstractProduct;
 class AbstractProduct {
 	/**
