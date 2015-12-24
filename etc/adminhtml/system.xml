@@ -14,7 +14,7 @@
 			<label>Mage2.PRO</label>
 		</tab>
 		<section
-			id='dfe_frontend'
+			id='dfe_product_view'
 			translate='label'
 			type='text'
 			showInDefault='1'
@@ -22,13 +22,13 @@
 			showInStore='1'
 		>
 			<tab>_df</tab>
-			<label>Frontend</label>
+			<label>Product View</label>
 			<class>separator-top</class>
 			<!--
 				2015-11-13
 				https://mage2.pro/t/197
 			-->
-			<resource>Dfe_Frontend::config</resource>
+			<resource>Dfe_ProductView::config</resource>
 			<group
 				id='sku'
 				translate='label'

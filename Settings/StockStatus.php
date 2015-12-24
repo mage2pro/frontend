@@ -22,7 +22,7 @@ class StockStatus extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend/stock_status/';}
+	protected function prefix() {return 'dfe_product_view/stock_status/';}
 
 	/** @return \Dfe\Frontend\Settings\StockStatus */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
