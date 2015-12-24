@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frontend\ConfigSource;
+namespace Dfe\ProductView\ConfigSource;
 use Magento\Framework\Option\ArrayInterface;
 class SkuVisibility implements ArrayInterface {
 	/**

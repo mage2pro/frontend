@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\Frontend\Plugin\Catalog\Block\Product;
-use Dfe\Frontend\Settings\StockStatus as StockStatusSettings;
+namespace Dfe\ProductView\Plugin\Catalog\Block\Product;
+use Dfe\ProductView\Settings\StockStatus as StockStatusSettings;
 use Magento\Catalog\Block\Product\AbstractProduct as _AbstractProduct;
 class AbstractProduct {
 	/**

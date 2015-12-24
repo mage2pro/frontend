@@ -1,6 +1,6 @@
 {
-	"name": "dfe/frontend"
-	,"description": "«Frontend» extension"
+	"name": "dfe/product-view"
+	,"description": "«Advanced Product View» extension"
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/t/197"
 	,"license": "proprietary"
@@ -11,5 +11,5 @@
 		"role": "Developer"
 	}]
 	,"require": {"df/all": "dev-master"}
-	,"extra": {"map": [["*", "Dfe/Frontend"]]}
+	,"extra": {"map": [["*", "Dfe/ProductView"]]}
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\Frontend\Settings;
+namespace Dfe\ProductView\Settings;
 use Magento\Catalog\Model\Product;
 class StockStatus extends \Df\Core\Settings {
 	/**
@@ -24,6 +24,6 @@ class StockStatus extends \Df\Core\Settings {
 	 */
 	protected function prefix() {return 'dfe_product_view/stock_status/';}
 
-	/** @return \Dfe\Frontend\Settings\StockStatus */
+	/** @return \Dfe\ProductView\Settings\StockStatus */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
 }

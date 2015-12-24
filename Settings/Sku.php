@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\Frontend\Settings;
+namespace Dfe\ProductView\Settings;
 use Df\Typography\Font;
-use Dfe\Frontend\ConfigSource\SkuVisibility as Visibility;
+use Dfe\ProductView\ConfigSource\SkuVisibility as Visibility;
 use Magento\Catalog\Model\Product;
 class Sku extends \Df\Core\Settings {
 	/** @return Font */

@@ -48,7 +48,7 @@
 					showInStore='1'
 				>
 					<label>Visibility</label>
-					<source_model>Dfe\Frontend\ConfigSource\SkuVisibility</source_model>
+					<source_model>Dfe\ProductView\ConfigSource\SkuVisibility</source_model>
 					<comment><![CDATA[<a href='https://mage2.pro/t/197'>Documentation.</a>]]></comment>
 				</field>
 				<field

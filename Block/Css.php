@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\Frontend\Block;
+namespace Dfe\ProductView\Block;
 use Df\Typography\Css as CssRenderer;
-use Dfe\Frontend\Settings\Sku as Settings;
+use Dfe\ProductView\Settings\Sku as Settings;
 class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	/**
 	 * 2015-12-20
