@@ -1,6 +1,7 @@
 <?php
 namespace Dfe\ProductView\Block;
 use Df\Typography\Css as CssRenderer;
+use Dfe\ProductView\Settings\Price as SettingsPrice;
 use Dfe\ProductView\Settings\Sku as SettingsSku;
 use Dfe\ProductView\Settings\StockStatus as SettingsStockStatus;
 class Css extends \Magento\Framework\View\Element\AbstractBlock {
@@ -20,12 +21,14 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 				SettingsSku::s()->fontL()->css('.sku > .type')
 				,SettingsSku::s()->fontV()->css('.sku > .value')
 				,SettingsStockStatus::s()->font()->css('.stock')
+				,SettingsPrice::s()->font()->css('.product-info-main .price')
 			);
 			if ($cssS) {
 				$result .= "\n" . df_concat_n(
 					df_link_inline(SettingsSku::s()->fontL()->link())
 					, df_link_inline(SettingsSku::s()->fontV()->link())
 					, df_link_inline(SettingsStockStatus::s()->font()->link())
+					, df_link_inline(SettingsPrice::s()->font()->link())
 				);
 			}
 			/** @var CssRenderer $css */
