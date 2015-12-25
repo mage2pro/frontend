@@ -1,19 +1,25 @@
 <?php
 namespace Dfe\ProductView\Settings;
+use Dfe\ProductView\ConfigSource\Visibility\VD as Visibility;
 use Magento\Catalog\Model\Product;
 class StockStatus extends \Df\Core\Settings {
 	/**
-	 * 2015-11-13
-	 * «Hide the Stock Status for the Virtual and Downloadable Products?»
+	 * 2015-11-14
+	 * «Product View» → «Stock Status» → «Visibility»
 	 * https://mage2.pro/t/196
 	 * https://mage2.pro/t/197
 	 * @param Product $product
-	 * @return bool
+	 * @return string
 	 */
-	public function hideStockStatus(Product $product) {
+	public function needHideFor(Product $product) {
+		/** @var string $v */
+		$v = $this->v('visibility');
 		return
-			df_virtual_or_downloadable($product)
-			&& $this->b('hide_for_virtual_and_downloadable_products')
+			Visibility::NONE === $v
+			|| (
+				Visibility::ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $v
+				&& df_virtual_or_downloadable($product)
+			)
 		;
 	}
 

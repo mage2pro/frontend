@@ -24,7 +24,7 @@ class AbstractProduct {
 	 * @return string
 	 */
 	public function afterDisplayProductStockStatus(_AbstractProduct $subject, $result) {
-		return $result && !StockStatusSettings::s()->hideStockStatus($subject->getProduct());
+		return $result && !StockStatusSettings::s()->needHideFor($subject->getProduct());
 	}
 }
 
