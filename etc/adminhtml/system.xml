@@ -43,7 +43,7 @@
 					id='font'
 					type='Df\Framework\Data\Form\Element\Font'
 					translate='label'
-					sortOrder='2'
+					sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
@@ -54,10 +54,106 @@
 				</field>
 			</group>
 			<group
-				id='price'
+				id='wishlist'
 				translate='label'
 				type='text'
 				sortOrder='2'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>Add to Wishlist</label>
+				<field
+					id='font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Font</label>
+					<comment><![CDATA[A font for the «Wishlist» link.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+				</field>
+			</group>
+			<group
+				id='compare'
+				translate='label'
+				type='text'
+				sortOrder='3'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>Add to Compare</label>
+				<field
+					id='font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Font</label>
+					<comment><![CDATA[A font for the «Compare» link.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+				</field>
+			</group>
+			<group
+				id='short_description'
+				translate='label'
+				type='text'
+				sortOrder='4'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label>Short Description</label>
+				<field
+					id='font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Font</label>
+					<comment><![CDATA[A font for the Short Description.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+				</field>
+			</group>
+			<group
+				id='reviews'
+				translate='label'
+				type='text'
+				sortOrder='5'
+				showInDefault='1'
+				showInWebsite='1'
+				showInStore='1'
+			>
+				<label><![CDATA[Reviews Count & Add Review]]></label>
+				<field
+					id='font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='1'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Font</label>
+					<comment><![CDATA[A font for the Reviews Count and Add Review blocks.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+				</field>
+			</group>
+			<group
+				id='price'
+				translate='label'
+				type='text'
+				sortOrder='6'
 				showInDefault='1'
 				showInWebsite='1'
 				showInStore='1'
@@ -81,7 +177,7 @@
 				id='sku'
 				translate='label'
 				type='text'
-				sortOrder='3'
+				sortOrder='7'
 				showInDefault='1'
 				showInWebsite='1'
 				showInStore='1'
@@ -182,7 +278,7 @@
 				id='stock_status'
 				translate='label'
 				type='text'
-				sortOrder='4'
+				sortOrder='6'
 				showInDefault='1'
 				showInWebsite='1'
 				showInStore='1'
