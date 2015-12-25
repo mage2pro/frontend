@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\ProductView\Settings;
 use Df\Typography\Font;
-use Dfe\ProductView\ConfigSource\SkuVisibility as Visibility;
+use Dfe\ProductView\ConfigSource\Visibility\VD as Visibility;
 use Magento\Catalog\Model\Product;
 class Sku extends \Df\Core\Settings {
 	/** @return Font */
@@ -24,7 +24,7 @@ class Sku extends \Df\Core\Settings {
 
 	/**
 	 * 2015-11-14
-	 * «Frontend» → «SKU» → «Visibility»
+	 * «Product View» → «SKU» → «Visibility»
 	 * https://mage2.pro/t/203
 	 * https://mage2.pro/t/197
 	 * @param Product $product
@@ -44,14 +44,14 @@ class Sku extends \Df\Core\Settings {
 
 	/**
 	 * 2015-12-21
-	 * «SKU» → «Frontend» → «Show ID instead of SKU?»
+	 * «Product View» → «SKU» → «Show ID instead of SKU?»
 	 * @return string
 	 */
 	public function showIdInsteadOfSku() {return $this->b('id_instead_of_sku');}
 
 	/**
 	 * 2015-11-14
-	 * «SKU» → «Frontend» → «Show Label?»
+	 * «Product View» → «SKU» → «Show Label?»
 	 * @return bool
 	 */
 	public function showLabel() {return $this->b('show_label');}

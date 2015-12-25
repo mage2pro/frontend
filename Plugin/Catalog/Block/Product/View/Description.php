@@ -24,7 +24,7 @@ class Description {
 		else {
 			/**
 			 * 2015-12-21
-			 * «Frontend» → «SKU» → «Show ID instead of SKU?»
+			 * «Product View» → «SKU» → «Show ID instead of SKU?»
 			 * https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L38
 			 */
 			if (Settings::s()->showIdInsteadOfSku()) {

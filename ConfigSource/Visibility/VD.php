@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\ProductView\ConfigSource;
+namespace Dfe\ProductView\ConfigSource\Visibility;
 use Magento\Framework\Option\ArrayInterface;
-class SkuVisibility implements ArrayInterface {
+class VD implements ArrayInterface {
 	/**
 	 * 2015-11-13
 	 * @override
