@@ -106,7 +106,7 @@
 					showInStore='1'
 				>
 					<label>Value Font</label>
-					<comment><![CDATA[A font style for the SKU.]]></comment>
+					<comment><![CDATA[A font for the SKU.]]></comment>
 					<backend_model>Df\Config\Backend\Serialized</backend_model>
 					<depends>
 						<field id='visibility' negative='1'>none</field>
@@ -122,7 +122,7 @@
 					showInStore='1'
 				>
 					<label>Label Font</label>
-					<comment><![CDATA[A font style for the SKU's label.]]></comment>
+					<comment><![CDATA[A font for the SKU's label.]]></comment>
 					<backend_model>Df\Config\Backend\Serialized</backend_model>
 					<depends>
 						<field id='visibility' negative='1'>none</field>
@@ -152,6 +152,22 @@
 					<source_model>Dfe\ProductView\ConfigSource\Visibility\VD</source_model>
 					<comment>
 						<![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
+				</field>
+				<field
+					id='font'
+					type='Df\Framework\Data\Form\Element\Font'
+					translate='label'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Font</label>
+					<comment><![CDATA[A font for the Stock Status.]]></comment>
+					<backend_model>Df\Config\Backend\Serialized</backend_model>
+					<depends>
+						<field id='visibility' negative='1'>none</field>
+					</depends>
 				</field>
 			</group>
 		</section>

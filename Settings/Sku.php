@@ -5,10 +5,10 @@ use Dfe\ProductView\ConfigSource\Visibility\VD as Visibility;
 use Magento\Catalog\Model\Product;
 class Sku extends \Df\Core\Settings {
 	/** @return Font */
-	public function fontL() {return $this->font('label_font');}
+	public function fontL() {return $this->_font('label_font');}
 
 	/** @return Font */
-	public function fontV() {return $this->font('value_font');}
+	public function fontV() {return $this->_font('value_font');}
 
 	/**
 	 * 2015-12-21
@@ -31,15 +31,7 @@ class Sku extends \Df\Core\Settings {
 	 * @return string
 	 */
 	public function needHideFor(Product $product) {
-		/** @var string $v */
-		$v = $this->v('visibility');
-		return
-			Visibility::NONE === $v
-			|| (
-				Visibility::ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $v
-				&& df_virtual_or_downloadable($product)
-			)
-		;
+		return Visibility::needHideFor($product, $this->v('visibility'));
 	}
 
 	/**

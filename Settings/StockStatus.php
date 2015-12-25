@@ -1,8 +1,12 @@
 <?php
 namespace Dfe\ProductView\Settings;
+use Df\Typography\Font;
 use Dfe\ProductView\ConfigSource\Visibility\VD as Visibility;
 use Magento\Catalog\Model\Product;
 class StockStatus extends \Df\Core\Settings {
+	/** @return Font */
+	public function font() {return $this->_font('font');}
+
 	/**
 	 * 2015-11-14
 	 * «Product View» → «Stock Status» → «Visibility»
@@ -12,15 +16,7 @@ class StockStatus extends \Df\Core\Settings {
 	 * @return string
 	 */
 	public function needHideFor(Product $product) {
-		/** @var string $v */
-		$v = $this->v('visibility');
-		return
-			Visibility::NONE === $v
-			|| (
-				Visibility::ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $v
-				&& df_virtual_or_downloadable($product)
-			)
-		;
+		return Visibility::needHideFor($product, $this->v('visibility'));
 	}
 
 	/**
