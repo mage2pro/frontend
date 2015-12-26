@@ -17,7 +17,7 @@ class Description {
 	 */
 	public function aroundToHtml(_Description $subject, \Closure $proceed) {
 		/** @var string $result */
-		/** https://github.com/magento/magento2/blob/2335247d4ae2dc1e0728ee73022b0a244ccd7f4c/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L39 */
+		/** https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L39 */
 		if ('sku' !== $subject['at_code']) {
 			$result = $proceed();
 		}
