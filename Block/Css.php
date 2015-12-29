@@ -19,9 +19,9 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	 * @return string
 	 */
 	protected function _toHtml() {
-		return !df_action_catalog_product_view() ? '' : df_n_prepend(df_concat_n(array_merge(
+		return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
-			, [df_style_inline(df_concat_n(array_merge(
+			, [df_style_inline(df_cc_n(array_merge(
 				df_map(function(Font $font, $selector) {
 					return $font->css($selector);
 				}, $this->fonts(), [], [], RM_AFTER)
