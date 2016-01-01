@@ -29,4 +29,16 @@
 			type='Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description'
 		/>
 	</type>
+	<!--
+		2016-01-01
+		Цель плагина — предоставить администратору возможность
+		скрывать приветствие «Welcome, John Doe!» из правого угла шапки витринных страниц.
+		«Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?».
+	-->
+	<type name='Magento\Theme\Block\Html\Header'>
+		<plugin
+			name='Dfe\Frontend\Plugin\Theme\Block\Html\Header'
+			type='Dfe\Frontend\Plugin\Theme\Block\Html\Header'
+		/>
+	</type>
 </config>

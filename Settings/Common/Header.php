@@ -13,9 +13,7 @@ class Header extends \Df\Core\Settings {
 	 * «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?»
 	 * @return bool
 	 */
-	public function hideWelcomeMessage() {
-		return $this->enable() && $this->b('hide_welcome_message');
-	}
+	public function hideWelcome() {return $this->enable() && $this->b(__FUNCTION__);}
 
 	/**
 	 * @override

@@ -63,7 +63,7 @@
 						<comment><![CDATA[]]></comment>
 	    			</field>
 					<field
-						id='hide_welcome_message'
+						id='hideWelcome'
 						translate='label'
 						type='Df\Framework\Data\Form\Element\Checkbox'
 						sortOrder='8'
