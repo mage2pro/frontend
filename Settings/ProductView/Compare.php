@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\ProductView\Settings;
+namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
 class Compare extends \Df\Core\Settings {
 	/** @return Font */
@@ -9,7 +9,7 @@ class Compare extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_product_view/compare/';}
+	protected function prefix() {return 'dfe_frontend/product_view/compare/';}
 
 	/** @return $this */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}

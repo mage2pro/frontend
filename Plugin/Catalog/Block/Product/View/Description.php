@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\ProductView\Plugin\Catalog\Block\Product\View;
-use Dfe\ProductView\Settings\Sku as Settings;
+namespace Dfe\Frontend\Plugin\Catalog\Block\Product\View;
+use Dfe\Frontend\Settings\ProductView\Sku as Settings;
 use Magento\Catalog\Block\Product\View\Description as _Description;
 class Description {
 	/**

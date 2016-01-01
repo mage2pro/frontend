@@ -4,7 +4,7 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'>
 	<body>
 		<referenceBlock name='head.additional'>
-			<block class='Dfe\ProductView\Block\Css'/>
+			<block class='Dfe\Frontend\Block\ProductView\Css'/>
 		</referenceBlock>
 	</body>
 </page>

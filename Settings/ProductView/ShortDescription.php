@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\ProductView\Settings;
+namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
-class Reviews extends \Df\Core\Settings {
+class ShortDescription extends \Df\Core\Settings {
 	/** @return Font */
 	public function font() {return $this->_font('font');}
 	/**
@@ -9,7 +9,7 @@ class Reviews extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_product_view/reviews/';}
+	protected function prefix() {return 'dfe_frontend/product_view/short_description/';}
 
 	/** @return $this */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}

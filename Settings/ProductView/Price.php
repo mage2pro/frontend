@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\ProductView\Settings;
+namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
-class Wishlist extends \Df\Core\Settings {
+class Price extends \Df\Core\Settings {
 	/** @return Font */
 	public function font() {return $this->_font('font');}
 	/**
@@ -9,7 +9,7 @@ class Wishlist extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_product_view/wishlist/';}
+	protected function prefix() {return 'dfe_frontend/product_view/price/';}
 
 	/** @return $this */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}

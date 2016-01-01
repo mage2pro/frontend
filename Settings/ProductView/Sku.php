@@ -1,7 +1,7 @@
 <?php
-namespace Dfe\ProductView\Settings;
+namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
-use Dfe\ProductView\ConfigSource\Visibility\VD as Visibility;
+use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 class Sku extends \Df\Core\Settings {
 	/** @return Font */
@@ -53,7 +53,7 @@ class Sku extends \Df\Core\Settings {
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_product_view/sku/';}
+	protected function prefix() {return 'dfe_frontend/product_view/sku/';}
 
 	/** @return $this */
 	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}

@@ -1,15 +1,15 @@
 <?php
-namespace Dfe\ProductView\Block;
+namespace Dfe\Frontend\Block\ProductView;
 use Df\Typography\Css as Renderer;
 use Df\Typography\Font;
-use Dfe\ProductView\Settings\Compare as SettingsCompare;
-use Dfe\ProductView\Settings\Price as SettingsPrice;
-use Dfe\ProductView\Settings\Reviews as SettingsReviews;
-use Dfe\ProductView\Settings\ShortDescription as SettingsShortDescription;
-use Dfe\ProductView\Settings\Sku as SettingsSku;
-use Dfe\ProductView\Settings\StockStatus as SettingsStockStatus;
-use Dfe\ProductView\Settings\Title as SettingsTitle;
-use Dfe\ProductView\Settings\Wishlist as SettingsWishlist;
+use Dfe\Frontend\Settings\ProductView\Compare as SettingsCompare;
+use Dfe\Frontend\Settings\ProductView\Price as SettingsPrice;
+use Dfe\Frontend\Settings\ProductView\Reviews as SettingsReviews;
+use Dfe\Frontend\Settings\ProductView\ShortDescription as SettingsShortDescription;
+use Dfe\Frontend\Settings\ProductView\Sku as SettingsSku;
+use Dfe\Frontend\Settings\ProductView\StockStatus as SettingsStockStatus;
+use Dfe\Frontend\Settings\ProductView\Title as SettingsTitle;
+use Dfe\Frontend\Settings\ProductView\Wishlist as SettingsWishlist;
 class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	/**
 	 * 2015-12-20

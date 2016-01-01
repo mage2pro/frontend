@@ -1,8 +1,8 @@
 {
-	"name": "dfe/product-view"
-	,"description": "«Advanced Product View» extension"
+	"name": "dfe/frontend"
+	,"description": "«Advanced Frontend Settings» extension"
 	,"type": "magento2-module"
-	,"homepage": "https://mage2.pro/t/197"
+	,"homepage": "https://mage2.pro/t/371"
 	,"license": "proprietary"
 	,"authors": [{
 		"name": "Dmitry Fedyuk",
@@ -11,5 +11,5 @@
 		"role": "Developer"
 	}]
 	,"require": {"df/all": "dev-master"}
-	,"extra": {"map": [["*", "Dfe/ProductView"]]}
+	,"extra": {"map": [["*", "Dfe/Frontend"]]}
 }

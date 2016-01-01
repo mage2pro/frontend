@@ -11,8 +11,8 @@
 	-->
 	<type name='Magento\Catalog\Block\Product\AbstractProduct'>
 		<plugin
-			name='Dfe\ProductView\Plugin\Catalog\Block\Product\AbstractProduct'
-			type='Dfe\ProductView\Plugin\Catalog\Block\Product\AbstractProduct'
+			name='Dfe\Frontend\Plugin\Catalog\Block\Product\AbstractProduct'
+			type='Dfe\Frontend\Plugin\Catalog\Block\Product\AbstractProduct'
 		/>
 	</type>
 	<!--
@@ -25,8 +25,8 @@
 	-->
 	<type name='Magento\Catalog\Block\Product\View\Description'>
 		<plugin
-			name='Dfe\ProductView\Plugin\Catalog\Block\Product\View\Description'
-			type='Dfe\ProductView\Plugin\Catalog\Block\Product\View\Description'
+			name='Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description'
+			type='Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description'
 		/>
 	</type>
 </config>

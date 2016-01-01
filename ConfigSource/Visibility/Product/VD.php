@@ -1,5 +1,5 @@
 <?php
-namespace Dfe\ProductView\ConfigSource\Visibility;
+namespace Dfe\Frontend\ConfigSource\Visibility\Product;
 use Magento\Catalog\Model\Product;
 use Magento\Framework\Option\ArrayInterface;
 class VD implements ArrayInterface {

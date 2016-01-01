@@ -1,6 +1,6 @@
 <?php
-namespace Dfe\ProductView\Plugin\Catalog\Block\Product;
-use Dfe\ProductView\Settings\StockStatus as StockStatusSettings;
+namespace Dfe\Frontend\Plugin\Catalog\Block\Product;
+use Dfe\Frontend\Settings\ProductView\StockStatus as StockStatusSettings;
 use Magento\Catalog\Block\Product\AbstractProduct as _AbstractProduct;
 class AbstractProduct {
 	/**
@@ -27,6 +27,3 @@ class AbstractProduct {
 		return $result && !StockStatusSettings::s()->needHideFor($subject->getProduct());
 	}
 }
-
-
-

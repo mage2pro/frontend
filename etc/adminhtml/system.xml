@@ -14,7 +14,7 @@
 			<label>Mage2.PRO</label>
 		</tab>
 		<section
-			id='dfe_product_view'
+			id='dfe_frontend'
 			translate='label'
 			type='text'
 			showInDefault='1'
@@ -22,15 +22,15 @@
 			showInStore='1'
 		>
 			<tab>_df</tab>
-			<label>Product View</label>
+			<label>Frontend</label>
 			<class>separator-top</class>
 			<!--
-				2015-11-13
-				https://mage2.pro/t/197
+				2016-01-01
+				https://mage2.pro/t/371
 			-->
-			<resource>Dfe_ProductView::config</resource>
+			<resource>Dfe_Frontend::config</resource>
 			<group
-				id='title'
+				id='common'
 				translate='label'
 				type='text'
 				sortOrder='1'
@@ -38,23 +38,48 @@
 				showInWebsite='1'
 				showInStore='1'
 			>
-				<label>Title</label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
+				<label>Common</label>
+				<group
+					id='header'
 					translate='label'
+					type='text'
 					sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the Title.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
+					<label>Header</label>
+					<field
+						id='enable'
+						translate='label'
+						type='Df\Framework\Data\Form\Element\Checkbox'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Enable?</label>
+						<backend_model>Df\Config\Backend\Checkbox</backend_model>
+						<comment><![CDATA[]]></comment>
+	    			</field>
+					<field
+						id='hide_welcome_message'
+						translate='label'
+						type='Df\Framework\Data\Form\Element\Checkbox'
+						sortOrder='8'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Hide Welcome Message?</label>
+						<backend_model>Df\Config\Backend\Checkbox</backend_model>
+						<comment><![CDATA[Setting this to «<code>Yes</code>» hides the message «<i>Welcome, John Doe!</i>» in the top right page corner for an authenticated customer.<br/>Currently, Magento 2 shows the customer name twice at the same place (issue <a href="https://github.com/magento/magento2/issues/2047">2047</a>), so I recommend to hide the welcome message.]]></comment>
+						<depends><field id='enable'>1</field></depends>
+					</field>
+				</group>
 			</group>
 			<group
-				id='wishlist'
+				id='product_view'
 				translate='label'
 				type='text'
 				sortOrder='2'
@@ -62,157 +87,33 @@
 				showInWebsite='1'
 				showInStore='1'
 			>
-				<label>Add to Wishlist</label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
+				<label>Product View</label>
+				<group
+					id='title'
 					translate='label'
+					type='text'
 					sortOrder='1'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the «Wishlist» link.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
-			</group>
-			<group
-				id='compare'
-				translate='label'
-				type='text'
-				sortOrder='3'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label>Add to Compare</label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
-					translate='label'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the «Compare» link.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
-			</group>
-			<group
-				id='short_description'
-				translate='label'
-				type='text'
-				sortOrder='4'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label>Short Description</label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
-					translate='label'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the Short Description.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
-			</group>
-			<group
-				id='reviews'
-				translate='label'
-				type='text'
-				sortOrder='5'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label><![CDATA[Reviews Count & Add Review]]></label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
-					translate='label'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the Reviews Count and Add Review blocks.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
-			</group>
-			<group
-				id='price'
-				translate='label'
-				type='text'
-				sortOrder='6'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label>Price</label>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
-					translate='label'
-					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the Price.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-				</field>
-			</group>
-			<group
-				id='sku'
-				translate='label'
-				type='text'
-				sortOrder='7'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label>SKU</label>
-				<field
-					id='visibility'
-					translate='label'
-					type='select'
-					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Visibility</label>
-					<source_model>Dfe\ProductView\ConfigSource\Visibility\VD</source_model>
-					<comment><![CDATA[<a href='https://mage2.pro/t/197'>Documentation.</a>]]></comment>
-				</field>
-				<field
-					id='id_instead_of_sku'
-					translate='label'
-					type='Df\Framework\Data\Form\Element\Checkbox'
-					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Show ID instead of SKU?</label>
-					<backend_model>Df\Config\Backend\Checkbox</backend_model>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
-				<field
-					id='label'
+					<label>Title</label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the Title.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='wishlist'
 					translate='label'
 					type='text'
 					sortOrder='2'
@@ -220,14 +121,23 @@
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Label</label>
-					<comment><![CDATA[The default label is `SKU`.]]></comment>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
-				<field
-					id='label_suffix'
+					<label>Add to Wishlist</label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the «Wishlist» link.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='compare'
 					translate='label'
 					type='text'
 					sortOrder='3'
@@ -235,86 +145,236 @@
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Label Suffix</label>
-					<comment><![CDATA[The default label suffix is `#:`.]]></comment>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
-				<field
-					id='value_font'
-					type='Df\Framework\Data\Form\Element\Font'
+					<label>Add to Compare</label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the «Compare» link.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='short_description'
 					translate='label'
+					type='text'
 					sortOrder='4'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Value Font</label>
-					<comment><![CDATA[A font for the SKU.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
-				<field
-					id='label_font'
-					type='Df\Framework\Data\Form\Element\Font'
+					<label>Short Description</label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the Short Description.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='reviews'
 					translate='label'
+					type='text'
 					sortOrder='5'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Label Font</label>
-					<comment><![CDATA[A font for the SKU's label.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
-			</group>
-			<group
-				id='stock_status'
-				translate='label'
-				type='text'
-				sortOrder='6'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
-			>
-				<label>Stock Status</label>
-				<!-- https://mage2.pro/t/196 -->
-				<field
-					id='visibility'
+					<label><![CDATA[Reviews Count & Add Review]]></label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the Reviews Count and Add Review blocks.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='price'
 					translate='label'
-					type='select'
-					sortOrder='1'
+					type='text'
+					sortOrder='6'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Visibility</label>
-					<source_model>Dfe\ProductView\ConfigSource\Visibility\VD</source_model>
-					<comment>
-						<![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
-				</field>
-				<field
-					id='font'
-					type='Df\Framework\Data\Form\Element\Font'
+					<label>Price</label>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='2'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the Price.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+					</field>
+				</group>
+				<group
+					id='sku'
 					translate='label'
-					sortOrder='2'
+					type='text'
+					sortOrder='7'
 					showInDefault='1'
 					showInWebsite='1'
 					showInStore='1'
 				>
-					<label>Font</label>
-					<comment><![CDATA[A font for the Stock Status.]]></comment>
-					<backend_model>Df\Config\Backend\Serialized</backend_model>
-					<depends>
-						<field id='visibility' negative='1'>none</field>
-					</depends>
-				</field>
+					<label>SKU</label>
+					<field
+						id='visibility'
+						translate='label'
+						type='select'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Visibility</label>
+						<source_model>Dfe\Frontend\ConfigSource\Visibility\Product\VD</source_model>
+						<comment><![CDATA[<a href='https://mage2.pro/t/197'>Documentation.</a>]]></comment>
+					</field>
+					<field
+						id='id_instead_of_sku'
+						translate='label'
+						type='Df\Framework\Data\Form\Element\Checkbox'
+						sortOrder='2'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Show ID instead of SKU?</label>
+						<backend_model>Df\Config\Backend\Checkbox</backend_model>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+					<field
+						id='label'
+						translate='label'
+						type='text'
+						sortOrder='2'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Label</label>
+						<comment><![CDATA[The default label is `SKU`.]]></comment>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+					<field
+						id='label_suffix'
+						translate='label'
+						type='text'
+						sortOrder='3'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Label Suffix</label>
+						<comment><![CDATA[The default label suffix is `#:`.]]></comment>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+					<field
+						id='value_font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='4'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Value Font</label>
+						<comment><![CDATA[A font for the SKU.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+					<field
+						id='label_font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='5'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Label Font</label>
+						<comment><![CDATA[A font for the SKU's label.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+				</group>
+				<group
+					id='stock_status'
+					translate='label'
+					type='text'
+					sortOrder='6'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Stock Status</label>
+					<!-- https://mage2.pro/t/196 -->
+					<field
+						id='visibility'
+						translate='label'
+						type='select'
+						sortOrder='1'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Visibility</label>
+						<source_model>Dfe\Frontend\ConfigSource\Visibility\Product\VD</source_model>
+						<comment>
+							<![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
+					</field>
+					<field
+						id='font'
+						type='Df\Framework\Data\Form\Element\Font'
+						translate='label'
+						sortOrder='2'
+						showInDefault='1'
+						showInWebsite='1'
+						showInStore='1'
+					>
+						<label>Font</label>
+						<comment><![CDATA[A font for the Stock Status.]]></comment>
+						<backend_model>Df\Config\Backend\Serialized</backend_model>
+						<depends>
+							<field id='visibility' negative='1'>none</field>
+						</depends>
+					</field>
+				</group>
 			</group>
 		</section>
 	</system>
