@@ -71,7 +71,7 @@
 						showInWebsite='1'
 						showInStore='1'
 					>
-						<label>Hide Welcome Message?</label>
+						<label>Hide the Welcome Message?</label>
 						<backend_model>Df\Config\Backend\Checkbox</backend_model>
 						<comment><![CDATA[Setting this to «<code>Yes</code>» hides the message «<i>Welcome, John Doe!</i>» in the top right page corner for an authenticated customer.<br/>Currently, Magento 2 shows the customer name twice at the same place (issue <a href="https://github.com/magento/magento2/issues/2047">2047</a>), so I recommend to hide the welcome message.]]></comment>
 						<depends><field id='enable'>1</field></depends>
