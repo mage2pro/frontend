@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\Frontend\Plugin\Catalog\Block\Product;
 use Dfe\Frontend\Settings\ProductView\StockStatus as StockStatusSettings;
-use Magento\Catalog\Block\Product\AbstractProduct as _AbstractProduct;
+use Magento\Catalog\Block\Product\AbstractProduct as Sb;
 class AbstractProduct {
 	/**
 	 * 2015-11-13
@@ -19,11 +19,11 @@ class AbstractProduct {
 	 * https://github.com/magento/magento2/issues/2354
 	 * https://mage2.pro/t/200
 	 * @see \Magento\Catalog\Block\Product\AbstractProduct::displayProductStockStatus()
-	 * @param _AbstractProduct $subject
-	 * @param string $result
-	 * @return string
+	 * @param Sb $sb
+	 * @param bool $result
+	 * @return bool
 	 */
-	public function afterDisplayProductStockStatus(_AbstractProduct $subject, $result) {
-		return $result && !StockStatusSettings::s()->needHideFor($subject->getProduct());
+	public function afterDisplayProductStockStatus(Sb $sb, $result) {
+		return $result && !StockStatusSettings::s()->needHideFor($sb->getProduct());
 	}
 }
