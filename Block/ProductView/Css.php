@@ -24,7 +24,7 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 			, [df_style_inline(df_cc_n(array_merge(
 				df_map(function(Font $font, $selector) {
 					return $font->css($selector);
-				}, $this->fonts(), [], [], RM_AFTER)
+				}, $this->fonts(), [], [], DF_AFTER)
 				,[$this->customCss()]
 			)))]
 		)));
@@ -53,7 +53,7 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 		}, [
 			self::$TO_COMPARE => SettingsCompare::s()->font()
 			,self::$TO_WISHLIST => SettingsWishlist::s()->font()
-		], [], [], RM_AFTER);
+		], [], [], DF_AFTER);
 		return $r->render();
 	}
 
