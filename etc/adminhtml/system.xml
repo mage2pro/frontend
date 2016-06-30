@@ -43,7 +43,7 @@
 					<field
 						id='enable'
 						translate='label'
-						type='Df\Framework\Data\Form\Element\Checkbox'
+						type='Df\Framework\Form\Element\Checkbox'
 						sortOrder='1'
 						showInDefault='1'
 						showInWebsite='1'
@@ -56,7 +56,7 @@
 					<field
 						id='hideWelcome'
 						translate='label'
-						type='Df\Framework\Data\Form\Element\Checkbox'
+						type='Df\Framework\Form\Element\Checkbox'
 						sortOrder='8'
 						showInDefault='1'
 						showInWebsite='1'
@@ -91,7 +91,7 @@
 					<label>Title</label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -115,7 +115,7 @@
 					<label>Add to Wishlist</label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -139,7 +139,7 @@
 					<label>Add to Compare</label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -163,7 +163,7 @@
 					<label>Short Description</label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -187,7 +187,7 @@
 					<label><![CDATA[Reviews Count & Add Review]]></label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -211,7 +211,7 @@
 					<label>Price</label>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='2'
 						showInDefault='1'
@@ -249,7 +249,7 @@
 					<field
 						id='id_instead_of_sku'
 						translate='label'
-						type='Df\Framework\Data\Form\Element\Checkbox'
+						type='Df\Framework\Form\Element\Checkbox'
 						sortOrder='2'
 						showInDefault='1'
 						showInWebsite='1'
@@ -293,7 +293,7 @@
 					</field>
 					<field
 						id='value_font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='4'
 						showInDefault='1'
@@ -309,7 +309,7 @@
 					</field>
 					<field
 						id='label_font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='5'
 						showInDefault='1'
@@ -351,7 +351,7 @@
 					</field>
 					<field
 						id='font'
-						type='Df\Framework\Data\Form\Element\Font'
+						type='Df\Framework\Form\Element\Font'
 						translate='label'
 						sortOrder='2'
 						showInDefault='1'
