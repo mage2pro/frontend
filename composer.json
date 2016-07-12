@@ -11,6 +11,9 @@
 		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
 		"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": "*", "mage2pro/google-font": "*"}
+	,"require": {
+		"mage2pro/core": "^1.4.3"
+		, "mage2pro/google-font": "*"
+	}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Frontend\\": ""}}
 }

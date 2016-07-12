@@ -1,5 +1,6 @@
 <?php
 namespace Dfe\Frontend\Settings\Common;
+/** @method static Header s() */
 class Header extends \Df\Core\Settings {
 	/**
 	 * 2016-01-01
@@ -21,7 +22,4 @@ class Header extends \Df\Core\Settings {
 	 * @return string
 	 */
 	protected function prefix() {return 'dfe_frontend/common/header/';}
-
-	/** @return self */
-	public static function s() {static $r; return $r ? $r : $r = df_o(__CLASS__);}
 }
