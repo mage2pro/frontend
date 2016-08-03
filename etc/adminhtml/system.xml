@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <config
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd"
+	xsi:noNamespaceSchemaLocation="urn:magento:module:Df_Config:etc/system_file.xsd"
 >
 	<system>
 		<section
@@ -92,6 +92,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -116,6 +117,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -140,6 +142,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -164,6 +167,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -188,6 +192,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='1'
 						showInDefault='1'
@@ -212,6 +217,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='2'
 						showInDefault='1'
@@ -294,6 +300,7 @@
 					<field
 						id='value_font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='4'
 						showInDefault='1'
@@ -310,6 +317,7 @@
 					<field
 						id='label_font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='5'
 						showInDefault='1'
@@ -352,6 +360,7 @@
 					<field
 						id='font'
 						type='Df\Framework\Form\Element\Font'
+						dfEntity='Df\Typography\Font'
 						translate='label'
 						sortOrder='2'
 						showInDefault='1'
