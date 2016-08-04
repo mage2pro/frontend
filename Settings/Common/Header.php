@@ -4,13 +4,6 @@ namespace Dfe\Frontend\Settings\Common;
 class Header extends \Df\Core\Settings {
 	/**
 	 * 2016-01-01
-	 * «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Enable?»
-	 * @return bool
-	 */
-	public function enable() {return $this->b(__FUNCTION__);}
-
-	/**
-	 * 2016-01-01
 	 * «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?»
 	 * @return bool
 	 */
@@ -18,6 +11,7 @@ class Header extends \Df\Core\Settings {
 
 	/**
 	 * @override
+	 * @see \Df\Core\Settings::prefix()
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */

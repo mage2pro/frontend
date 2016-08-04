@@ -7,6 +7,7 @@ class ShortDescription extends \Df\Core\Settings {
 	public function font() {return $this->_font('font');}
 	/**
 	 * @override
+	 * @see \Df\Core\Settings::prefix()
 	 * @used-by \Df\Core\Settings::v()
 	 * @return string
 	 */
