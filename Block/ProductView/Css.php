@@ -22,9 +22,9 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 		return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			, [df_style_inline(df_cc_n(array_merge(
-				df_map(function(Font $font, $selector) {
+				df_map_k(function($selector, Font $font) {
 					return $font->css($selector);
-				}, $this->fonts(), [], [], DF_AFTER)
+				}, $this->fonts())
 				,[$this->customCss()]
 			)))]
 		)));
@@ -46,14 +46,14 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 				, '.product-info-main .product.attibute.sku .type:after'
 			);
 		}
-		df_map(function(Font $font, $selector) use ($r) {
+		df_map_k(function($selector, Font $font) use ($r) {
 			if ($font->enabled() && !$font->familyIsStandard()) {
 				$r->rule('font-family', df_quote_single('luma-icons'), $selector . ':after');
 			}
 		}, [
 			self::$TO_COMPARE => SettingsCompare::s()->font()
 			,self::$TO_WISHLIST => SettingsWishlist::s()->font()
-		], [], [], DF_AFTER);
+		]);
 		return $r->render();
 	}
 

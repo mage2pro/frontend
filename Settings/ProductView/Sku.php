@@ -15,7 +15,7 @@ class Sku extends \Df\Core\Settings {
 	 * 2015-12-21
 	 * @return string
 	 */
-	public function label() {return $this->v(__FUNCTION__);}
+	public function label() {return $this->v();}
 
 	/**
 	 * 2015-12-21
