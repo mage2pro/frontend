@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\Frontend\Settings\Common;
 /** @method static Header s() */
-class Header extends \Df\Core\Settings {
+class Header extends \Df\Config\Settings {
 	/**
 	 * 2016-01-01
 	 * «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?»
@@ -11,9 +11,9 @@ class Header extends \Df\Core\Settings {
 
 	/**
 	 * @override
-	 * @see \Df\Core\Settings::prefix()
-	 * @used-by \Df\Core\Settings::v()
+	 * @see \Df\Config\Settings::prefix()
+	 * @used-by \Df\Config\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend/common/header/';}
+	protected function prefix() {return 'dfe_frontend/common/header';}
 }

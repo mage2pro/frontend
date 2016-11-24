@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/frontend"
-	,"version": "1.0.1"
+	,"version": "1.0.2"
 	,"description": "The «Advanced Frontend Settings» extension."
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/t/371"
@@ -12,7 +12,7 @@
 		"role": "Developer"
 	}]
 	,"require": {
-		"mage2pro/core": "^1.6.2"
+		"mage2pro/core": "^1.9.21"
 		, "mage2pro/google-font": "*"
 	}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\Frontend\\": ""}}

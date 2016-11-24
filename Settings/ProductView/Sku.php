@@ -4,7 +4,7 @@ use Df\Typography\Font;
 use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 /** @method static Sku s() */
-class Sku extends \Df\Core\Settings {
+class Sku extends \Df\Config\Settings {
 	/** @return Font */
 	public function fontL() {return $this->_font('label_font');}
 
@@ -51,9 +51,9 @@ class Sku extends \Df\Core\Settings {
 
 	/**
 	 * @override
-	 * @see \Df\Core\Settings::prefix()
-	 * @used-by \Df\Core\Settings::v()
+	 * @see \Df\Config\Settings::prefix()
+	 * @used-by \Df\Config\Settings::v()
 	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend/product_view/sku/';}
+	protected function prefix() {return 'dfe_frontend/product_view/sku';}
 }
