@@ -15,10 +15,10 @@
 			<tab>_df</tab>
 			<label>Frontend</label>
 			<class>separator-top</class>
-			<!--
-				2016-01-01
-				https://mage2.pro/t/371
-			-->
+<!--
+2016-01-01
+https://mage2.pro/t/371
+-->
 			<resource>Dfe_Frontend::config</resource>
 			<group
 				id='common'
