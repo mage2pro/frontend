@@ -2,7 +2,7 @@
 namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
 /** @method static ShortDescription s() */
-class ShortDescription extends \Df\Config\Settings {
+final class ShortDescription extends \Df\Config\Settings {
 	/** @return Font */
 	public function font() {return $this->_font('font');}
 	/**

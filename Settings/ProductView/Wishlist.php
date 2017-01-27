@@ -2,7 +2,7 @@
 namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
 /** @method static Wishlist s() */
-class Wishlist extends \Df\Config\Settings {
+final class Wishlist extends \Df\Config\Settings {
 	/** @return Font */
 	public function font() {return $this->_font('font');}
 	/**

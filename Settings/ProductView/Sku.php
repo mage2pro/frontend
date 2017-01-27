@@ -4,7 +4,7 @@ use Df\Typography\Font;
 use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 /** @method static Sku s() */
-class Sku extends \Df\Config\Settings {
+final class Sku extends \Df\Config\Settings {
 	/** @return Font */
 	public function fontL() {return $this->_font('label_font');}
 

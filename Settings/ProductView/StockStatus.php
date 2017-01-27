@@ -4,7 +4,7 @@ use Df\Typography\Font;
 use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 /** @method static StockStatus s() */
-class StockStatus extends \Df\Config\Settings {
+final class StockStatus extends \Df\Config\Settings {
 	/** @return Font */
 	public function font() {return $this->_font('font');}
 
