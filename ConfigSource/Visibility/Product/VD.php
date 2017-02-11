@@ -24,7 +24,7 @@ class VD implements ArrayInterface {
 	 * @param string|null $visibility
 	 * @return string
 	 */
-	public static function needHideFor(Product $product, $visibility) {
+	static function needHideFor(Product $product, $visibility) {
 		return
 			self::$NONE === $visibility
 			|| (
