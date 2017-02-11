@@ -9,7 +9,7 @@ class VD implements ArrayInterface {
 	 * @see \Magento\Framework\Option\ArrayInterface::toOptionArray()
 	 * @return array(array(string => string))
 	 */
-	public function toOptionArray() {
+	function toOptionArray() {
 		return df_map_to_options_t([
 			'Visible'
 			, self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE =>

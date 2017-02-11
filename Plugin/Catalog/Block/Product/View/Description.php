@@ -15,7 +15,7 @@ class Description {
 	 * @param \Closure $proceed
 	 * @return string
 	 */
-	public function aroundToHtml(Sb $sb, \Closure $proceed) {
+	function aroundToHtml(Sb $sb, \Closure $proceed) {
 		/** @var string $result */
 		/** https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L39 */
 		if ('sku' !== $sb['at_code']) {

@@ -6,7 +6,7 @@ use Magento\Catalog\Model\Product;
 /** @method static StockStatus s() */
 final class StockStatus extends \Df\Config\Settings {
 	/** @return Font */
-	public function font() {return $this->_font('font');}
+	function font() {return $this->_font('font');}
 
 	/**
 	 * 2015-11-14
@@ -16,7 +16,7 @@ final class StockStatus extends \Df\Config\Settings {
 	 * @param Product $product
 	 * @return string
 	 */
-	public function needHideFor(Product $product) {
+	function needHideFor(Product $product) {
 		return Visibility::needHideFor($product, $this->v('visibility'));
 	}
 

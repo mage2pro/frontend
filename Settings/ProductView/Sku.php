@@ -6,22 +6,22 @@ use Magento\Catalog\Model\Product;
 /** @method static Sku s() */
 final class Sku extends \Df\Config\Settings {
 	/** @return Font */
-	public function fontL() {return $this->_font('label_font');}
+	function fontL() {return $this->_font('label_font');}
 
 	/** @return Font */
-	public function fontV() {return $this->_font('value_font');}
+	function fontV() {return $this->_font('value_font');}
 
 	/**
 	 * 2015-12-21
 	 * @return string
 	 */
-	public function label() {return $this->v();}
+	function label() {return $this->v();}
 
 	/**
 	 * 2015-12-21
 	 * @return string
 	 */
-	public function labelSuffix() {return $this->v('label_suffix');}
+	function labelSuffix() {return $this->v('label_suffix');}
 
 	/**
 	 * 2015-11-14
@@ -31,7 +31,7 @@ final class Sku extends \Df\Config\Settings {
 	 * @param Product $product
 	 * @return string
 	 */
-	public function needHideFor(Product $product) {
+	function needHideFor(Product $product) {
 		return Visibility::needHideFor($product, $this->v('visibility'));
 	}
 
@@ -40,14 +40,14 @@ final class Sku extends \Df\Config\Settings {
 	 * «Product View» → «SKU» → «Show ID instead of SKU?»
 	 * @return string
 	 */
-	public function showIdInsteadOfSku() {return $this->b('id_instead_of_sku');}
+	function showIdInsteadOfSku() {return $this->b('id_instead_of_sku');}
 
 	/**
 	 * 2015-11-14
 	 * «Product View» → «SKU» → «Show Label?»
 	 * @return bool
 	 */
-	public function showLabel() {return $this->b('show_label');}
+	function showLabel() {return $this->b('show_label');}
 
 	/**
 	 * @override

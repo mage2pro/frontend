@@ -23,7 +23,7 @@ class AbstractProduct {
 	 * @param bool $result
 	 * @return bool
 	 */
-	public function afterDisplayProductStockStatus(Sb $sb, $result) {
+	function afterDisplayProductStockStatus(Sb $sb, $result) {
 		return $result && !StockStatusSettings::s()->needHideFor($sb->getProduct());
 	}
 }
