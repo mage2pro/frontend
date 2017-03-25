@@ -17,7 +17,7 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	 * 2015-12-20
 	 * @override
 	 * @see \Magento\Framework\View\Element\AbstractBlock::_toHtml()
-	 * @used-by \Magento\Framework\View\Element\AbstractBlock::toHtml
+	 * @used-by \Magento\Framework\View\Element\AbstractBlock::toHtml()
 	 * @return string
 	 */
 	protected function _toHtml() {return !df_action_catalog_product_view() ? '' :
