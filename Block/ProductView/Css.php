@@ -10,6 +10,8 @@ use Dfe\Frontend\Settings\ProductView\Sku as SettingsSku;
 use Dfe\Frontend\Settings\ProductView\StockStatus as SettingsStockStatus;
 use Dfe\Frontend\Settings\ProductView\Title as SettingsTitle;
 use Dfe\Frontend\Settings\ProductView\Wishlist as SettingsWishlist;
+// 2015-12-20
+/** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	/**
 	 * 2015-12-20
