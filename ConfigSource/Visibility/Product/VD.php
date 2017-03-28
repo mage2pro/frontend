@@ -9,14 +9,12 @@ class VD implements ArrayInterface {
 	 * @see \Magento\Framework\Option\ArrayInterface::toOptionArray()
 	 * @return array(array(string => string))
 	 */
-	function toOptionArray() {
-		return df_map_to_options_t([
-			'Visible'
-			, self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE =>
-				'Visible for all but the Virtual and Downloadable Products'
-			, self::$NONE => 'Hidden'
-		]);
-	}
+	function toOptionArray() {return df_map_to_options_t([
+		'Visible'
+		,self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE =>
+			'Visible for all but the Virtual and Downloadable Products'
+		, self::$NONE => 'Hidden'
+	]);}
 
 	/**
 	 * 2015-12-25
@@ -24,15 +22,13 @@ class VD implements ArrayInterface {
 	 * @param string|null $visibility
 	 * @return string
 	 */
-	static function needHideFor(Product $product, $visibility) {
-		return
-			self::$NONE === $visibility
-			|| (
-				self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $visibility
-				&& df_virtual_or_downloadable($product)
-			)
-		;
-	}
+	static function needHideFor(Product $product, $visibility) {return
+		self::$NONE === $visibility
+		|| (
+			self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $visibility
+			&& df_virtual_or_downloadable($product)
+		)
+	;}
 
 	/** @var string */
 	private static $ALL_BUT_VIRTUAL_AND_DOWNLOADABLE = 'for_virtual_and_downloadable';
