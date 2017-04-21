@@ -20,17 +20,15 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	 * @used-by \Magento\Framework\View\Element\AbstractBlock::toHtml()
 	 * @return string
 	 */
-	protected function _toHtml() {return !df_action_catalog_product_view() ? '' :
-		df_n_prepend(df_cc_n(array_merge(
+	protected function _toHtml() {return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
+		array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
-			, [df_style_inline(df_cc_n(array_merge(
-				df_map_k(function($selector, Font $font) {
-					return $font->css($selector);
-				}, $this->fonts())
+			,[df_style_inline(df_cc_n(array_merge(
+				df_map_k(function($selector, Font $font) {return $font->css($selector);}, $this->fonts())
 				,[$this->customCss()]
 			)))]
-		)))
-	;}
+		)
+	));}
 	
 	/**
 	 * 2015-12-25
