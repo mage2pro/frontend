@@ -6,45 +6,34 @@
 	<system>
 		<section
 			id='dfe_frontend'
+			showInDefault='1' showInStore='1' showInWebsite='1'
 			translate='label'
-			showInDefault='1'
-			showInWebsite='1'
-			showInStore='1'
 		>
 			<tab>_df</tab>
 			<label>Frontend</label>
 			<class>separator-top</class>
-<!--
-2016-01-01
-https://mage2.pro/t/371
--->
+<!-- 2016-01-01 https://mage2.pro/t/371 -->
 			<resource>Dfe_Frontend::config</resource>
 			<group
 				id='common'
-				translate='label'
+				showInDefault='1' showInStore='1' showInWebsite='1'
 				sortOrder='1'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
+				translate='label'
 			>
 				<label>Common</label>
 				<group
 					id='header'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Header</label>
 					<field
 						id='enable'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='1'
 						translate='label'
 						type='Df\Framework\Form\Element\Checkbox'
-						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Enable?</label>
 						<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -52,12 +41,10 @@ https://mage2.pro/t/371
 	    			</field>
 					<field
 						id='hideWelcome'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='8'
 						translate='label'
 						type='Df\Framework\Form\Element\Checkbox'
-						sortOrder='8'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Hide the Welcome Message?</label>
 						<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -68,31 +55,25 @@ https://mage2.pro/t/371
 			</group>
 			<group
 				id='product_view'
-				translate='label'
+				showInDefault='1' showInStore='1' showInWebsite='1'
 				sortOrder='2'
-				showInDefault='1'
-				showInWebsite='1'
-				showInStore='1'
+				translate='label'
 			>
 				<label>Product View</label>
 				<group
 					id='title'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='1'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Title</label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the Title.]]></comment>
@@ -101,22 +82,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='wishlist'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='2'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Add to Wishlist</label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the «Wishlist» link.]]></comment>
@@ -125,22 +102,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='compare'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='3'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Add to Compare</label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the «Compare» link.]]></comment>
@@ -149,22 +122,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='short_description'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='4'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Short Description</label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the Short Description.]]></comment>
@@ -173,22 +142,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='reviews'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='5'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label><![CDATA[Reviews Count & Add Review]]></label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the Reviews Count and Add Review blocks.]]></comment>
@@ -197,22 +162,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='price'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='6'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Price</label>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='2'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the Price.]]></comment>
@@ -221,21 +182,17 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='sku'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='7'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>SKU</label>
 					<field
 						id='visibility'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='1'
 						translate='label'
 						type='select'
-						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Visibility</label>
 						<source_model>Dfe\Frontend\ConfigSource\Visibility\Product\VD</source_model>
@@ -243,12 +200,10 @@ https://mage2.pro/t/371
 					</field>
 					<field
 						id='id_instead_of_sku'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='2'
 						translate='label'
 						type='Df\Framework\Form\Element\Checkbox'
-						sortOrder='2'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Show ID instead of SKU?</label>
 						<backend_model>Df\Config\Backend\Checkbox</backend_model>
@@ -258,12 +213,10 @@ https://mage2.pro/t/371
 					</field>
 					<field
 						id='label'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='2'
 						translate='label'
 						type='text'
-						sortOrder='2'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Label</label>
 						<comment><![CDATA[The default label is `SKU`.]]></comment>
@@ -273,12 +226,10 @@ https://mage2.pro/t/371
 					</field>
 					<field
 						id='label_suffix'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='3'
 						translate='label'
 						type='text'
-						sortOrder='3'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Label Suffix</label>
 						<comment><![CDATA[The default label suffix is `#:`.]]></comment>
@@ -287,14 +238,12 @@ https://mage2.pro/t/371
 						</depends>
 					</field>
 					<field
-						id='value_font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='value_font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='4'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Value Font</label>
 						<comment><![CDATA[A font for the SKU.]]></comment>
@@ -304,14 +253,12 @@ https://mage2.pro/t/371
 						</depends>
 					</field>
 					<field
-						id='label_font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='label_font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='5'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Label Font</label>
 						<comment><![CDATA[A font for the SKU's label.]]></comment>
@@ -323,22 +270,18 @@ https://mage2.pro/t/371
 				</group>
 				<group
 					id='stock_status'
-					translate='label'
+					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='6'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
+					translate='label'
 				>
 					<label>Stock Status</label>
 					<!-- https://mage2.pro/t/196 -->
 					<field
 						id='visibility'
+						showInDefault='1' showInStore='1' showInWebsite='1'
+						sortOrder='1'
 						translate='label'
 						type='select'
-						sortOrder='1'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
 					>
 						<label>Visibility</label>
 						<source_model>Dfe\Frontend\ConfigSource\Visibility\Product\VD</source_model>
@@ -346,14 +289,12 @@ https://mage2.pro/t/371
 							<![CDATA[<a href='https://mage2.pro/t/196'>Has it any sense to display the stock status for the virtual products?</a>]]></comment>
 					</field>
 					<field
-						id='font'
-						type='Df\Framework\Form\Element\Font'
 						dfEntity='Df\Typography\Font'
-						translate='label'
+						id='font'
+						showInDefault='1' showInStore='1' showInWebsite='1'
 						sortOrder='2'
-						showInDefault='1'
-						showInWebsite='1'
-						showInStore='1'
+						translate='label'
+						type='Df\Framework\Form\Element\Font'
 					>
 						<label>Font</label>
 						<comment><![CDATA[A font for the Stock Status.]]></comment>
