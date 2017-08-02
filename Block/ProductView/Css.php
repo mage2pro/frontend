@@ -10,17 +10,31 @@ use Dfe\Frontend\Settings\ProductView\Sku as SettingsSku;
 use Dfe\Frontend\Settings\ProductView\StockStatus as SettingsStockStatus;
 use Dfe\Frontend\Settings\ProductView\Title as SettingsTitle;
 use Dfe\Frontend\Settings\ProductView\Wishlist as SettingsWishlist;
+use Magento\Framework\View\Element\AbstractBlock as _P;
 // 2015-12-20
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
-class Css extends \Magento\Framework\View\Element\AbstractBlock {
+class Css extends _P {
 	/**
 	 * 2015-12-20
 	 * @override
-	 * @see \Magento\Framework\View\Element\AbstractBlock::_toHtml()
-	 * @used-by \Magento\Framework\View\Element\AbstractBlock::toHtml()
+	 * @see _P::_toHtml()
+	 *		$html = $this->_loadCache();
+	 *		if ($html === false) {
+	 *			if ($this->hasData('translate_inline')) {
+	 *				$this->inlineTranslation->suspend($this->getData('translate_inline'));
+	 *			}
+	 *			$this->_beforeToHtml();
+	 *			$html = $this->_toHtml();
+	 *			$this->_saveCache($html);
+	 *			if ($this->hasData('translate_inline')) {
+	 *				$this->inlineTranslation->resume();
+	 *			}
+	 *		}
+	 *		$html = $this->_afterToHtml($html);
+	 * https://github.com/magento/magento2/blob/2.2.0-RC1.6/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L642-L683
 	 * @return string
 	 */
-	protected function _toHtml() {return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
+	final protected function _toHtml() {return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
 		array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			,[df_style_inline(df_cc_n(array_merge(
@@ -32,6 +46,7 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 	
 	/**
 	 * 2015-12-25
+	 * @used-by _toHtml()
 	 * @return string
 	 */
 	private function customCss() {
@@ -59,26 +74,22 @@ class Css extends \Magento\Framework\View\Element\AbstractBlock {
 
 	/**
 	 * 2015-12-25
+	 * @used-by _toHtml()
 	 * @return array(mixed => Font)
 	 */
-	private function fonts() {
-		if (!isset($this->{__METHOD__})) {
-			$this->{__METHOD__} = [
-				'.sku > .type' => SettingsSku::s()->fontL()
-				,'.sku > .value' => SettingsSku::s()->fontV()
-				,'.stock' => SettingsStockStatus::s()->font()
-				,'.product-info-main .price' => SettingsPrice::s()->font()
-				,'.product-info-main [itemprop="name"]' => SettingsTitle::s()->font()
-				,'.product-info-main [itemprop="description"]' => SettingsShortDescription::s()->font()
-				// 2015-12-26
-				// «a» надо обязательно включать в селектор, иначе стандартный победит.
-				,'.product-info-main .product-reviews-summary a'  => SettingsReviews::s()->font()
-				,self::$TO_COMPARE => SettingsCompare::s()->font()
-				,self::$TO_WISHLIST => SettingsWishlist::s()->font()
-			];
-		}
-		return $this->{__METHOD__};
-	}
+	private function fonts() {return dfc($this, function() {return [
+		'.sku > .type' => SettingsSku::s()->fontL()
+		,'.sku > .value' => SettingsSku::s()->fontV()
+		,'.stock' => SettingsStockStatus::s()->font()
+		,'.product-info-main .price' => SettingsPrice::s()->font()
+		,'.product-info-main [itemprop="name"]' => SettingsTitle::s()->font()
+		,'.product-info-main [itemprop="description"]' => SettingsShortDescription::s()->font()
+		// 2015-12-26
+		// «a» надо обязательно включать в селектор, иначе стандартный победит.
+		,'.product-info-main .product-reviews-summary a'  => SettingsReviews::s()->font()
+		,self::$TO_COMPARE => SettingsCompare::s()->font()
+		,self::$TO_WISHLIST => SettingsWishlist::s()->font()
+	];});}
 
 	/** @var string */
 	private static $TO_COMPARE = '.product-info-main .tocompare';
