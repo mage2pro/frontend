@@ -50,15 +50,13 @@ class Css extends _P {
 	 * @return string
 	 */
 	private function customCss() {
-		/** @var Renderer $r */
-		$r = Renderer::i();
-		/** @var string $labelSuffix */
-		$labelSuffix = SettingsSku::s()->labelSuffix();
+		$r = Renderer::i(); /** @var Renderer $r */
+		$labelSuffix = SettingsSku::s()->labelSuffix(); /** @var string $labelSuffix */
 		if ('#:' !== $labelSuffix) {
 			$r->rule(
 				'content'
-				, df_quote_single($labelSuffix)
-				, '.product-info-main .product.attibute.sku .type:after'
+				,df_quote_single($labelSuffix)
+				,'.product-info-main .product.attibute.sku .type:after'
 			);
 		}
 		df_map_k(function($selector, Font $font) use ($r) {
@@ -84,8 +82,7 @@ class Css extends _P {
 		,'.product-info-main .price' => SettingsPrice::s()->font()
 		,'.product-info-main [itemprop="name"]' => SettingsTitle::s()->font()
 		,'.product-info-main [itemprop="description"]' => SettingsShortDescription::s()->font()
-		// 2015-12-26
-		// «a» надо обязательно включать в селектор, иначе стандартный победит.
+		// 2015-12-26 «a» надо обязательно включать в селектор, иначе стандартный победит.
 		,'.product-info-main .product-reviews-summary a'  => SettingsReviews::s()->font()
 		,self::$TO_COMPARE => SettingsCompare::s()->font()
 		,self::$TO_WISHLIST => SettingsWishlist::s()->font()
