@@ -59,7 +59,7 @@ class Css extends _P {
 				,'.product-info-main .product.attibute.sku .type:after'
 			);
 		}
-		df_map_k(function($selector, Font $font) use ($r) {
+		df_map_k(function($selector, Font $font) use($r) {
 			if ($font->enabled() && !$font->familyIsStandard()) {
 				$r->rule('font-family', df_quote_single('luma-icons'), $selector . ':after');
 			}
