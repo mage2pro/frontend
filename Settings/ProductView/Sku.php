@@ -31,9 +31,7 @@ final class Sku extends \Df\Config\Settings {
 	 * @param Product $product
 	 * @return string
 	 */
-	function needHideFor(Product $product) {
-		return Visibility::needHideFor($product, $this->v('visibility'));
-	}
+	function needHideFor(Product $product) {return Visibility::needHideFor($product, $this->v('visibility'));}
 
 	/**
 	 * 2015-12-21
