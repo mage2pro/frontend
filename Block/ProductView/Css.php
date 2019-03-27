@@ -35,7 +35,7 @@ class Css extends _P {
 	 * https://github.com/magento/magento2/blob/2.2.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L643-L689
 	 * @return string
 	 */
-	final protected function _toHtml() {return !df_action_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
+	final protected function _toHtml() {return !df_is_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
 		array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			,[df_style_inline(df_cc_n(array_merge(
