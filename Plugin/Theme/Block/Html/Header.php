@@ -17,8 +17,8 @@ class Header {
 	 * @return string
 	 */
 	function aroundToHtml(Sb $sb, \Closure $f) {
-		// 2016-01-01
-		// https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Theme/view/frontend/templates/html/header.phtml#L14-L15
+		# 2016-01-01
+		# https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Theme/view/frontend/templates/html/header.phtml#L14-L15
 		/** @noinspection PhpUndefinedMethodInspection */
 		return 'welcome' === $sb->getShowPart() && S::s()->hideWelcome() ? '' : $f();
 	}

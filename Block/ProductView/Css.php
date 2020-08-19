@@ -11,7 +11,7 @@ use Dfe\Frontend\Settings\ProductView\StockStatus as SettingsStockStatus;
 use Dfe\Frontend\Settings\ProductView\Title as SettingsTitle;
 use Dfe\Frontend\Settings\ProductView\Wishlist as SettingsWishlist;
 use Magento\Framework\View\Element\AbstractBlock as _P;
-// 2015-12-20
+# 2015-12-20
 /** @final Unable to use the PHP «final» keyword here because of the M2 code generation. */
 class Css extends _P {
 	/**
@@ -83,7 +83,7 @@ class Css extends _P {
 		,'.product-info-main .price' => SettingsPrice::s()->font()
 		,'.product-info-main [itemprop="name"]' => SettingsTitle::s()->font()
 		,'.product-info-main [itemprop="description"]' => SettingsShortDescription::s()->font()
-		// 2015-12-26 «a» надо обязательно включать в селектор, иначе стандартный победит.
+		# 2015-12-26 «a» надо обязательно включать в селектор, иначе стандартный победит.
 		,'.product-info-main .product-reviews-summary a'  => SettingsReviews::s()->font()
 		,self::$TO_COMPARE => SettingsCompare::s()->font()
 		,self::$TO_WISHLIST => SettingsWishlist::s()->font()
