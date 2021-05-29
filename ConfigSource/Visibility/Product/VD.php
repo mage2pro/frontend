@@ -18,13 +18,11 @@ class VD implements ArrayInterface {
 
 	/**
 	 * 2015-12-25
-	 * @param Product $product
-	 * @param string|null $visibility
+	 * @param Product $p
+	 * @param string|null $v
 	 * @return string
 	 */
-	static function needHideFor(Product $product, $visibility) {return
-		self::$NONE === $visibility || (self::$TANGIBLE === $visibility && !df_tangible($product))
-	;}
+	static function needHideFor(Product $p, $v) {return self::$NONE === $v || (self::$TANGIBLE === $v && !df_tangible($p));}
 
 	/** @var string */
 	private static $TANGIBLE = 'tangible';
