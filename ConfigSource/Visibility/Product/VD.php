@@ -2,6 +2,7 @@
 namespace Dfe\Frontend\ConfigSource\Visibility\Product;
 use Magento\Catalog\Model\Product;
 use Magento\Framework\Option\ArrayInterface;
+# 2015-11-13
 class VD implements ArrayInterface {
 	/**
 	 * 2015-11-13
@@ -11,9 +12,8 @@ class VD implements ArrayInterface {
 	 */
 	function toOptionArray() {return df_map_to_options_t([
 		'Visible'
-		,self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE =>
-			'Visible for all but the Virtual and Downloadable Products'
-		, self::$NONE => 'Hidden'
+		,self::$TANGIBLE => 'Visible for tangible products'
+		,self::$NONE => 'Hidden'
 	]);}
 
 	/**
@@ -23,15 +23,11 @@ class VD implements ArrayInterface {
 	 * @return string
 	 */
 	static function needHideFor(Product $product, $visibility) {return
-		self::$NONE === $visibility
-		|| (
-			self::$ALL_BUT_VIRTUAL_AND_DOWNLOADABLE === $visibility
-			&& df_virtual_or_downloadable($product)
-		)
+		self::$NONE === $visibility || (self::$TANGIBLE === $visibility && !df_tangible($product))
 	;}
 
 	/** @var string */
-	private static $ALL_BUT_VIRTUAL_AND_DOWNLOADABLE = 'for_virtual_and_downloadable';
+	private static $TANGIBLE = 'tangible';
 	/** @var string */
 	private static $NONE = 'none';
 }
