@@ -47,7 +47,7 @@ class Css extends _P {
 	
 	/**
 	 * 2015-12-25
-	 * @used-by _toHtml()
+	 * @used-by self::_toHtml()
 	 * @return string
 	 */
 	private function customCss() {
@@ -73,7 +73,7 @@ class Css extends _P {
 
 	/**
 	 * 2015-12-25
-	 * @used-by _toHtml()
+	 * @used-by self::_toHtml()
 	 * @return array(mixed => Font)
 	 */
 	private function fonts() {return dfc($this, function() {return [

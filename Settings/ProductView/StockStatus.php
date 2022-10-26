@@ -22,7 +22,6 @@ final class StockStatus extends \Df\Config\Settings {
 	 * @override
 	 * @see \Df\Config\Settings::prefix()
 	 * @used-by \Df\Config\Settings::v()
-	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend/product_view/stock_status';}
+	protected function prefix():string {return 'dfe_frontend/product_view/stock_status';}
 }

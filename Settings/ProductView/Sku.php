@@ -34,15 +34,13 @@ final class Sku extends \Df\Config\Settings {
 	function needHideFor(Product $product) {return Visibility::needHideFor($product, $this->v('visibility'));}
 
 	/**
-	 * 2015-12-21
-	 * «Product View» → «SKU» → «Show ID instead of SKU?»
+	 * 2015-12-21 «Product View» → «SKU» → «Show ID instead of SKU?»
 	 * @return string
 	 */
 	function showIdInsteadOfSku() {return $this->b('id_instead_of_sku');}
 
 	/**
-	 * 2015-11-14
-	 * «Product View» → «SKU» → «Show Label?»
+	 * 2015-11-14 «Product View» → «SKU» → «Show Label?»
 	 * @return bool
 	 */
 	function showLabel() {return $this->b('show_label');}
@@ -51,7 +49,6 @@ final class Sku extends \Df\Config\Settings {
 	 * @override
 	 * @see \Df\Config\Settings::prefix()
 	 * @used-by \Df\Config\Settings::v()
-	 * @return string
 	 */
-	protected function prefix() {return 'dfe_frontend/product_view/sku';}
+	protected function prefix():string {return 'dfe_frontend/product_view/sku';}
 }
