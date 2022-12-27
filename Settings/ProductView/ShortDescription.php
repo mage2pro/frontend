@@ -4,7 +4,7 @@ use Df\Typography\Font;
 /** @method static ShortDescription s() */
 final class ShortDescription extends \Df\Config\Settings {
 	/** @return Font */
-	function font() {return $this->_font('font');}
+	function font():Font {return $this->_font('font');}
 	/**
 	 * @override
 	 * @see \Df\Config\Settings::prefix()
