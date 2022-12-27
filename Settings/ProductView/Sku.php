@@ -28,10 +28,9 @@ final class Sku extends \Df\Config\Settings {
 	 * «Product View» → «SKU» → «Visibility»
 	 * https://mage2.pro/t/203
 	 * https://mage2.pro/t/197
-	 * @param Product $product
 	 * @return string
 	 */
-	function needHideFor(Product $product) {return Visibility::needHideFor($product, $this->v('visibility'));}
+	function needHideFor(Product $p) {return Visibility::needHideFor($p, $this->v('visibility'));}
 
 	/**
 	 * 2015-12-21 «Product View» → «SKU» → «Show ID instead of SKU?»
