@@ -6,7 +6,7 @@ use Magento\Catalog\Model\Product;
 /** @method static Sku s() */
 final class Sku extends \Df\Config\Settings {
 	/** @return Font */
-	function fontL() {return $this->_font('label_font');}
+	function fontL():Font {return $this->_font('label_font');}
 
 	/** @return Font */
 	function fontV() {return $this->_font('value_font');}
