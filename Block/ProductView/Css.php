@@ -70,7 +70,7 @@ class Css extends _P {
 	 * @used-by self::_toHtml()
 	 * @return array(mixed => Font)
 	 */
-	private function fonts() {return dfc($this, function() {return [
+	private function fonts():array {return dfc($this, function():array {return [
 		'.sku > .type' => SettingsSku::s()->fontL()
 		,'.sku > .value' => SettingsSku::s()->fontV()
 		,'.stock' => SettingsStockStatus::s()->font()
