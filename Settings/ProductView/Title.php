@@ -3,7 +3,7 @@ namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
 /** @method static Title s() */
 final class Title extends \Df\Config\Settings {
-	/** @return Font */
+	/** @used-by \Dfe\Frontend\Block\ProductView\Css::fonts() */
 	function font():Font {return $this->_font('font');}
 	/**
 	 * @override
