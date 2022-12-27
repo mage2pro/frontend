@@ -12,11 +12,10 @@ class Description {
 	 * https://mage2.pro/t/202
 	 * @see \Magento\Catalog\Block\Product\View\Description::toHtml()
 	 */
-	function aroundToHtml(Sb $sb, \Closure $f):string {
-		/** @var string $result */
+	function aroundToHtml(Sb $sb, \Closure $f):string {/** @var string $r */
 		/** https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L39 */
 		if ('sku' !== $sb['at_code']) {
-			$result = $f();
+			$r = $f();
 		}
 		else {
 			# 2015-12-21
@@ -32,7 +31,7 @@ class Description {
 				$sb['at_label'] = !$label ? 'none' : __($label);
 			}
 			if (Settings::s()->needHideFor($sb->getProduct())) {
-				$result = '';
+				$r = '';
 			}
 			else {
 				if (!Settings::s()->showLabel()) {
@@ -41,10 +40,10 @@ class Description {
 					# https://github.com/magento/magento2/blob/2335247d4ae2dc1e0728ee73022b0a244ccd7f4c/app/code/Magento/Catalog/view/frontend/templates/product/view/attribute.phtml#L37
 					$sb['at_label'] = 'none';
 				}
-				$result = $f();
+				$r = $f();
 			}
 		}
-		return $result;
+		return $r;
 	}
 }
 
