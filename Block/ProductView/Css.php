@@ -47,9 +47,8 @@ class Css extends _P {
 	/**
 	 * 2015-12-25
 	 * @used-by self::_toHtml()
-	 * @return string
 	 */
-	private function customCss() {
+	private function customCss():string {
 		$r = Renderer::i(); /** @var Renderer $r */
 		$labelSuffix = SettingsSku::s()->labelSuffix(); /** @var string $labelSuffix */
 		if ('#:' !== $labelSuffix) {
