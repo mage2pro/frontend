@@ -19,9 +19,8 @@ final class Sku extends \Df\Config\Settings {
 
 	/**
 	 * 2015-12-21
-	 * @return string
 	 */
-	function labelSuffix() {return $this->v('label_suffix');}
+	function labelSuffix():string {return $this->v('label_suffix');}
 
 	/**
 	 * 2015-11-14
