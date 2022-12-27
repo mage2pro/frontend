@@ -16,7 +16,6 @@ class AbstractProduct {
 	 * https://github.com/magento/magento2/issues/2354
 	 * https://mage2.pro/t/200
 	 * @see \Magento\Catalog\Block\Product\AbstractProduct::displayProductStockStatus()
-	 * @return bool
 	 */
-	function afterDisplayProductStockStatus(Sb $sb, bool $r) {return $r && !S::s()->needHideFor($sb->getProduct());}
+	function afterDisplayProductStockStatus(Sb $sb, bool $r):bool {return $r && !S::s()->needHideFor($sb->getProduct());}
 }
