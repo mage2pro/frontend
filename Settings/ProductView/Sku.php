@@ -5,11 +5,11 @@ use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 /** @method static Sku s() */
 final class Sku extends \Df\Config\Settings {
-	/** @return Font */
+	/** @used-by \Dfe\Frontend\Block\ProductView\Css::fonts() */
 	function fontL():Font {return $this->_font('label_font');}
 
-	/** @return Font */
-	function fontV() {return $this->_font('value_font');}
+	/** @used-by \Dfe\Frontend\Block\ProductView\Css::fonts() */
+	function fontV():Font {return $this->_font('value_font');}
 
 	/**
 	 * 2015-12-21
