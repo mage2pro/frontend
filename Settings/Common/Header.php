@@ -4,9 +4,8 @@ namespace Dfe\Frontend\Settings\Common;
 final class Header extends \Df\Config\Settings {
 	/**
 	 * 2016-01-01 «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?»
-	 * @return bool
 	 */
-	function hideWelcome() {return $this->enable() && $this->b();}
+	function hideWelcome():bool {return $this->enable() && $this->b();}
 
 	/**
 	 * @override
