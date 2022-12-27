@@ -14,7 +14,7 @@ final class StockStatus extends \Df\Config\Settings {
 	 * https://mage2.pro/t/196
 	 * https://mage2.pro/t/197
 	 */
-	function needHideFor(Product $product):string {return Visibility::needHideFor($product, $this->v('visibility'));}
+	function needHideFor(Product $p):string {return Visibility::needHideFor($p, $this->v('visibility'));}
 
 	/**
 	 * @override
