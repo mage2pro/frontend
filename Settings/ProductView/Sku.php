@@ -19,6 +19,7 @@ final class Sku extends \Df\Config\Settings {
 
 	/**
 	 * 2015-12-21
+	 * @used-by \Dfe\Frontend\Block\ProductView\Css::customCss()
 	 */
 	function labelSuffix():string {return $this->v('label_suffix');}
 
