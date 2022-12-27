@@ -37,7 +37,7 @@ final class Sku extends \Df\Config\Settings {
 	 * 2015-12-21 «Product View» → «SKU» → «Show ID instead of SKU?»
 	 * @return string
 	 */
-	function showIdInsteadOfSku() {return $this->b('id_instead_of_sku');}
+	function showIdInsteadOfSku():string {return $this->b('id_instead_of_sku');}
 
 	/**
 	 * 2015-11-14 «Product View» → «SKU» → «Show Label?»
