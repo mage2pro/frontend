@@ -6,7 +6,7 @@ use Magento\Catalog\Model\Product;
 /** @method static StockStatus s() */
 final class StockStatus extends \Df\Config\Settings {
 	/** @return Font */
-	function font() {return $this->_font('font');}
+	function font():Font {return $this->_font('font');}
 
 	/**
 	 * 2015-11-14
