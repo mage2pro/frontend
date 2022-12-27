@@ -11,8 +11,6 @@ class Description {
 	 * https://mage2.pro/t/203
 	 * https://mage2.pro/t/202
 	 * @see \Magento\Catalog\Block\Product\View\Description::toHtml()
-	 * @param Sb $sb
-	 * @param \Closure $f
 	 * @return string
 	 */
 	function aroundToHtml(Sb $sb, \Closure $f) {
