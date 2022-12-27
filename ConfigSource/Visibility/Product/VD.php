@@ -10,7 +10,7 @@ class VD implements ArrayInterface {
 	 * @see \Magento\Framework\Option\ArrayInterface::toOptionArray()
 	 * @return array(array(string => string))
 	 */
-	function toOptionArray() {return df_map_to_options_t([
+	function toOptionArray():array {return df_map_to_options_t([
 		'Visible'
 		,self::$TANGIBLE => 'Visible for tangible products'
 		,self::$NONE => 'Hidden'
