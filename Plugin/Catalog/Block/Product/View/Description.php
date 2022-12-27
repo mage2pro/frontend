@@ -11,9 +11,8 @@ class Description {
 	 * https://mage2.pro/t/203
 	 * https://mage2.pro/t/202
 	 * @see \Magento\Catalog\Block\Product\View\Description::toHtml()
-	 * @return string
 	 */
-	function aroundToHtml(Sb $sb, \Closure $f) {
+	function aroundToHtml(Sb $sb, \Closure $f):string {
 		/** @var string $result */
 		/** https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/layout/catalog_product_view.xml#L39 */
 		if ('sku' !== $sb['at_code']) {
