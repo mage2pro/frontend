@@ -2,7 +2,7 @@
 namespace Dfe\Frontend\Plugin\Theme\Block\Html;
 use Dfe\Frontend\Settings\Common\Header as S;
 use Magento\Theme\Block\Html\Header as Sb;
-class Header {
+final class Header {
 	/**
 	 * 2016-01-01
 	 * Цель плагина — предоставить администратору возможность
