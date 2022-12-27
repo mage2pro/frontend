@@ -10,9 +10,8 @@ class Header {
 	 * «Mage2.PRO» → «Frontend» → «Common» → «Header» → «Hide the Welcome Message?».
 	 * @see \Magento\Theme\Block\Html\Header::toHtml()
 	 * https://github.com/magento/magento2/blob/2.0.0/lib/internal/Magento/Framework/View/Element/AbstractBlock.php#L635-L662
-	 * @return string
 	 */
-	function aroundToHtml(Sb $sb, \Closure $f) {
+	function aroundToHtml(Sb $sb, \Closure $f):string {
 		# 2016-01-01
 		# https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Theme/view/frontend/templates/html/header.phtml#L14-L15
 		/** @noinspection PhpUndefinedMethodInspection */
