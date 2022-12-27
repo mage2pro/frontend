@@ -3,7 +3,10 @@ namespace Dfe\Frontend\Settings\ProductView;
 use Df\Typography\Font;
 /** @method static Compare s() */
 final class Compare extends \Df\Config\Settings {
-	/** @used-by \Dfe\Frontend\Block\ProductView\Css::customCss() */
+	/**
+	 * @used-by \Dfe\Frontend\Block\ProductView\Css::customCss()
+	 * @used-by \Dfe\Frontend\Block\ProductView\Css::fonts()
+	 */
 	function font():Font {return $this->_font('font');}
 	/**
 	 * @override
