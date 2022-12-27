@@ -25,8 +25,7 @@ class Description {
 			if (Settings::s()->showIdInsteadOfSku()) {
 				$sb['at_call'] = 'getId';
 			}
-			/** @var string $label */
-			$label = Settings::s()->label();
+			$label = Settings::s()->label(); /** @var string $label */
 			if ('SKU' !== $label) {
 				# 2015-12-21
 				# https://github.com/magento/magento2/blob/2.0.0/app/code/Magento/Catalog/view/frontend/templates/product/view/attribute.phtml#L37
