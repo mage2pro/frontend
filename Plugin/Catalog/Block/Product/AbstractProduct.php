@@ -16,7 +16,6 @@ class AbstractProduct {
 	 * https://github.com/magento/magento2/issues/2354
 	 * https://mage2.pro/t/200
 	 * @see \Magento\Catalog\Block\Product\AbstractProduct::displayProductStockStatus()
-	 * @param Sb $sb
 	 * @param bool $r
 	 * @return bool
 	 */
