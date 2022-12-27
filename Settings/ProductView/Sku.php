@@ -13,7 +13,7 @@ final class Sku extends \Df\Config\Settings {
 
 	/**
 	 * 2015-12-21
-	 * @return string
+	 * @used-by \Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description::aroundToHtml()
 	 */
 	function label():string {return $this->v();}
 
