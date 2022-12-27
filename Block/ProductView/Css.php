@@ -38,7 +38,7 @@ class Css extends _P {
 		array_merge(
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			,[df_style_inline(df_cc_n(array_merge(
-				df_map_k(function($selector, Font $font) {return $font->css($selector);}, $this->fonts())
+				df_map_k(function(string $selector, Font $font):string {return $font->css($selector);}, $this->fonts())
 				,[$this->customCss()]
 			)))]
 		)
