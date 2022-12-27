@@ -41,6 +41,7 @@ final class Sku extends \Df\Config\Settings {
 
 	/**
 	 * 2015-11-14 «Product View» → «SKU» → «Show Label?»
+	 * @used-by \Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description::aroundToHtml()
 	 */
 	function showLabel():bool {return $this->b('show_label');}
 
