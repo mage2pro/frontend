@@ -18,6 +18,7 @@ class VD implements ArrayInterface {
 
 	/**
 	 * 2015-12-25
+	 * @used-by \Dfe\Frontend\Settings\ProductView\Sku::needHideFor()
 	 * @param Product $p
 	 * @param string|null $v
 	 * @return string
