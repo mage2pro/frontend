@@ -28,6 +28,8 @@ final class Sku extends \Df\Config\Settings {
 	 * «Product View» → «SKU» → «Visibility»
 	 * https://mage2.pro/t/203
 	 * https://mage2.pro/t/197
+	 * @used-by \Dfe\Frontend\Plugin\Catalog\Block\Product\AbstractProduct::afterDisplayProductStockStatus()
+	 * @used-by \Dfe\Frontend\Plugin\Catalog\Block\Product\View\Description::aroundToHtml()
 	 */
 	function needHideFor(Product $p):string {return Visibility::needHideFor($p, $this->v('visibility'));}
 
