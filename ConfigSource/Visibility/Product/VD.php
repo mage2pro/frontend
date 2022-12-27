@@ -20,9 +20,10 @@ class VD implements ArrayInterface {
 	 * 2015-12-25
 	 * @used-by \Dfe\Frontend\Settings\ProductView\Sku::needHideFor()
 	 * @param string|null $v
-	 * @return string
 	 */
-	static function needHideFor(Product $p, $v) {return self::$NONE === $v || (self::$TANGIBLE === $v && !df_tangible($p));}
+	static function needHideFor(Product $p, $v):bool {return
+		self::$NONE === $v || (self::$TANGIBLE === $v && !df_tangible($p))
+	;}
 
 	/** @var string */
 	private static $TANGIBLE = 'tangible';
