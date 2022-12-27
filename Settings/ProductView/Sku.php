@@ -41,9 +41,8 @@ final class Sku extends \Df\Config\Settings {
 
 	/**
 	 * 2015-11-14 «Product View» → «SKU» → «Show Label?»
-	 * @return bool
 	 */
-	function showLabel() {return $this->b('show_label');}
+	function showLabel():bool {return $this->b('show_label');}
 
 	/**
 	 * @override
