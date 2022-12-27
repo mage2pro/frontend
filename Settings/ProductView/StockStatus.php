@@ -5,7 +5,7 @@ use Dfe\Frontend\ConfigSource\Visibility\Product\VD as Visibility;
 use Magento\Catalog\Model\Product;
 /** @method static StockStatus s() */
 final class StockStatus extends \Df\Config\Settings {
-	/** @return Font */
+	/** @used-by \Dfe\Frontend\Block\ProductView\Css::fonts() */
 	function font():Font {return $this->_font('font');}
 
 	/**
