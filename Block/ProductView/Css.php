@@ -36,6 +36,7 @@ class Css extends _P {
 	 */
 	final protected function _toHtml():string {return !df_is_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
 		array_merge(
+			# 2023-08-25 $font can be an empty object.
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			,[df_style_inline(df_cc_n(array_merge(
 				df_map_k(function(string $selector, Font $font):string {return $font->css($selector);}, $this->fonts())
