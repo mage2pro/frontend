@@ -36,7 +36,6 @@ class Css extends _P {
 	 */
 	final protected function _toHtml():string {return !df_is_catalog_product_view() ? '' : df_n_prepend(df_cc_n(
 		array_merge(
-			# 2023-08-25 $font can be an empty object.
 			array_map(function(Font $font) {return df_link_inline($font->link());}, $this->fonts())
 			,[df_style_inline(df_cc_n(array_merge(
 				df_map_k(function(string $selector, Font $font):string {return $font->css($selector);}, $this->fonts())
@@ -72,7 +71,7 @@ class Css extends _P {
 	 * @used-by self::_toHtml()
 	 * @return array(mixed => Font)
 	 */
-	private function fonts():array {return dfc($this, function():array {return [
+	private function fonts():array {return dfc($this, function():array {return array_filter([
 		'.sku > .type' => SettingsSku::s()->fontL()
 		,'.sku > .value' => SettingsSku::s()->fontV()
 		,'.stock' => SettingsStockStatus::s()->font()
@@ -83,7 +82,10 @@ class Css extends _P {
 		,'.product-info-main .product-reviews-summary a'  => SettingsReviews::s()->font()
 		,self::$TO_COMPARE => SettingsCompare::s()->font()
 		,self::$TO_WISHLIST => SettingsWishlist::s()->font()
-	];});}
+	# 2023-08-25
+	# «Df\Typography\Font::familyS(): Return value must be of type string, null returned»:
+	# https://github.com/mage2pro/core/issues/331
+	], function(Font $f) {return !$f->isEmpty();});});}
 
 	/** @var string */
 	private static $TO_COMPARE = '.product-info-main .tocompare';
