@@ -67,6 +67,7 @@ class Css extends _P {
 
 	/**
 	 * 2015-12-25
+	 * 2023-08-25 These @see Font objects can be empty.
 	 * @used-by self::_toHtml()
 	 * @return array(mixed => Font)
 	 */
